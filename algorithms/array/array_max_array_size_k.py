@@ -13,5 +13,17 @@ def array_max_array_size_k(array : list[int], k:int):
         
     return max_sum
 
+def array_max_array_size_k_imporved(array : list[int], k):
 
-print(array_max_array_size_k(array, k))
+    max_sum = sum(array[:k])
+    print(array[:k])
+    print(max_sum)
+    for i in range(len(array) - k):
+        current_sum = max_sum - array[i] + array[i + k+1]
+        max_sum = max(current_sum, max_sum)
+
+    return max_sum
+
+
+
+print(array_max_array_size_k_imporved(array, k))
