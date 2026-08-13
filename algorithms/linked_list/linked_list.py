@@ -1,6 +1,6 @@
 class Node:
     data = None
-    next_node = None
+    next_node : Node = None
 
     def __init__(self, data):
         self.data = data
@@ -10,6 +10,9 @@ class Node:
 
 class LinkedList:
     head : Node = None
+
+    def __init__(self, head : Node = None):
+        self.head = head
 
     def prepend(self, node : Node):
         if self.head is None:
@@ -44,12 +47,12 @@ class LinkedList:
                 current = current.next_node
         
 
-l = LinkedList()
+# l = LinkedList()
 
-l.prepend(Node(10))
-l.prepend(Node(20))
-l.prepend(Node(30))
-l.__repr__()
+# l.prepend(Node(10))
+# l.prepend(Node(20))
+# l.prepend(Node(30))
+# l.__repr__()
 
 
         
